@@ -582,9 +582,6 @@
             { num: '02', label: 'Страница 02', image: 'images/print-02.webp' },
             { num: '03', label: 'Страница 03', image: 'images/print-03.webp' },
             { num: '04', label: 'Страница 04', image: 'images/print-04.webp' },
-            { num: '05', label: 'Страница 05', image: 'images/print-05.webp' },
-            { num: '06', label: 'Страница 06', image: 'images/print-06.webp' },
-            { num: '07', label: 'Страница 07', image: 'images/print-07.webp' }
         ];
 
         /**
@@ -799,13 +796,16 @@
             return `
                 <div class="relative ${aspect} w-full rounded-2xl overflow-hidden border border-borderline placeholder-dark flex flex-col items-center justify-center p-5 text-center">
                     <video src="${videoPath}"
-                           poster="${posterPath}"
-                           controls
-                           playsinline
-                           preload="metadata"
-                           onerror="this.style.display='none'"
-                           class="absolute inset-0 w-full h-full object-cover z-10 bg-obsidian">
-                    </video>
+       poster="${posterPath}"
+       controls
+       autoplay
+       muted
+       loop
+       playsinline
+       preload="metadata"
+       onerror="this.style.display='none'"
+       class="absolute inset-0 w-full h-full object-cover z-10 bg-obsidian">
+</video>
                     <div class="relative z-0 flex flex-col items-center gap-2">
                         <div class="w-11 h-11 rounded-full bg-cherry/15 border border-cherry/45 flex items-center justify-center text-roseGlow mb-0.5">
                             ▶
